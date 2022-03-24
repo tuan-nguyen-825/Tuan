@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" additionalparam="-format pdf -out c:\javadoc.pdf -notoc -noindex -headertext &quot;&lt;b&gt; Title bold&lt;/b&gt; - this is the title&quot;" classpath="." sourcefiles="src/FibRecursion.java,src/FibIteration.java,src/Main.java" sourcepath="src">
+            <doclet name="com.aurigalogic.doclet.core.Doclet" path="C:\Users\tuann_000\Downloads\AurigaDoclet-0.1b\aurigadoclet\bin\AurigaDoclet.jar"/>
+        </javadoc>
+    </target>
+</project>

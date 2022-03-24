@@ -8,9 +8,9 @@
  */
 public class FibIteration {
 	//Declare variable
-	int prevFib1;
-	int prevFib2;
-	int currentFib;
+	long prevFib1;
+	long prevFib2;
+	long currentFib;
 	/**
 	 * Method to find Fibonacci Number at a given nth number using iterative approach.
 	 * Fibonacci sequence start with zero and 1.
@@ -27,7 +27,7 @@ public class FibIteration {
 	 * @author Tuan Nguyen
 	 */
 	//Finding nth Fibonacci Number
-	public int getFibNumber (int n)
+	public long getFibNumber (int n)
 	{
 		if(n == 1) return 0; //Fibonacci sequence start with zero and 1
 		if(n == 2) return 1;
