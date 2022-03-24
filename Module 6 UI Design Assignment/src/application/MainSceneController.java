@@ -13,7 +13,16 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-
+/**
+ * Controller class: contain methods initialize, readFile, writeFile, and countWord.
+ * 		initialize(): set buttons on UI layout inactive until fill in label text.
+ * 		readFile(): read a file by enter a file name. Display the file in console and application
+ *		writeFile(): write text to a file. Will create a new file if it is not exist. 
+ * 		contWord(): count word in a file. 
+ * 
+ * @author Tuan Nguyen
+ *
+ */
 public class MainSceneController {
 	@FXML private Label labelResult;
 	@FXML private TextField textFieldFileName;
@@ -24,7 +33,7 @@ public class MainSceneController {
 	@FXML
 	public void initialize() {
 		//textFieldFileName.setText("The Raven.txt");
-		
+
 		textFieldFileName.textProperty().addListener((obs, oldText, newText) -> {
 			System.out.println("Text changed from "+oldText+" to "+newText);
 			Boolean isFileNameEmpty = textFieldFileName.getText().isEmpty();
@@ -35,7 +44,16 @@ public class MainSceneController {
 
 
 	}
-
+	/**
+	 * Method to read and display text files' content.
+	 * This method use File and Scanner class to read files.
+	 * 
+	 * @param event enter file name, then click on Read-file button to read files
+	 * @param fileName: name of text files includes file extensions
+	 * @param file: file open
+	 * @param fileReader: file scan to read
+	 *
+	 */
 	// Read a file
 	public void readFile(ActionEvent event) {
 		try {
@@ -62,6 +80,14 @@ public class MainSceneController {
 		}
 	}// end readFile
 
+	/**
+	 * Method to write text to a file.
+	 * This method use FileWriter class and writer method to write text into a file.
+	 * A new file will automatic created if it not exist. 
+	 * Text will be written overlap on the file destination. 
+	 * 
+	 * @param event On UI layout, enter file name and click on write button to write a file.
+	 */
 	// Write to a file
 	public void writeFile(ActionEvent event) {
 		try {
@@ -83,6 +109,13 @@ public class MainSceneController {
 		}
 	}//end
 
+	/**
+	 * Method to count number of words in a file.
+	 * 
+	 * @param event on UI layout, enter a file name and click on count button to count words in a file.
+	 * @param wordCount: total number of words counted in a file
+	 * @param file: file name
+	 */
 	// Count word in a file
 	public void countWord(ActionEvent event) {
 
@@ -110,9 +143,6 @@ public class MainSceneController {
 			System.out.println("File is not existing. Please check file name again.");
 			e.printStackTrace();
 		}
-
 	}
-
-
 }
 

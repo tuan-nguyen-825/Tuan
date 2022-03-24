@@ -8,7 +8,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 
-
+/**
+ * Word Occurrences Application is used to read files, write text to file, and count words in a file. 
+ * UI design tool: JavaFX Scene Builder
+ * 
+ * @author Tuan Nguyen
+ *
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
