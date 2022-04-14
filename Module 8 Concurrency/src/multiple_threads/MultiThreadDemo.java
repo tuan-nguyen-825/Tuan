@@ -23,7 +23,7 @@ public class MultiThreadDemo extends Thread{
 		long startTime = System.nanoTime();
 		try {
 			//Create an array
-			int[] myArray = new int[200_000];
+			int[] myArray = new int[10];
 
 			//Fill in random numbers to the array
 			for(int i = 0; i < myArray.length; i++ ) {
