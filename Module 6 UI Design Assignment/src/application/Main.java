@@ -1,6 +1,9 @@
 package application;
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -38,8 +41,11 @@ public class Main extends Application {
 	/**
 	 * This is main method of Word Occurrences Application
 	 * @param args array of strings arguments is used to start the application
+	 * @throws Exception 
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+
 		launch(args);
+
 	}
 }
